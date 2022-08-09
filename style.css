@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.1s;
+}
+
+:root {
+    /* Primary */
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red1: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red2: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+    /* Neutral */
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    Font-size: 18px;
+    background-color: var(--Very-dark-blue);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.center {
+    display: flex;
+    align-items: flex-start;
+}
+
+main {
+    width: fit-content;
+    display: flex;
+}
+
+.account-continer {
+    width: 200px;
+    background-color: var(--Dark-blue);
+    border-radius: 10px;
+}
+
+.account-continer .profile-div {
+    flex-direction: column;
+    background-color: var(--Blue);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.profile-div img {
+    width: 75px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.profile-div p {
+    font-size: 13px;
+    color: var(--Pale-Blue);
+    margin-bottom: 5px;
+}
+
+.profile-div h1 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+
+
+
+.options-div {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.options-div .menu-link {
+    font-size: 15px;
+    padding: 10px 0;
+    color: var(--Pale-Blue);
+    cursor: pointer;
+}
+
+
+
+.info-grid-continer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.grid {
+    width: 200px;
+    height: 200px;
+    background-color: var(--Light-red1);
+    background-image: url(./images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: 90% 0%;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-end;
+    margin: auto;
+}
+
+.grid:hover {
+    filter: brightness(115%);
+    transition: 0.5s;
+}
+
+/* backgronds */
+
+
+.play {
+    background-color: var(--Soft-blue);
+    background-image: url(./images/icon-play.svg);
+}
+
+.study {
+    background-color: var(--Light-red2);
+    background-image: url(./images/icon-study.svg);
+}
+
+.exercise {
+    background-color: var(--Lime-green);
+    background-image: url(./images/icon-exercise.svg);
+
+}
+
+.social {
+    background-color: var(--Violet);
+    background-image: url(./images/icon-social.svg);
+}
+
+.selfcare {
+    background-color: var(--Soft-orange);
+    background-image: url(./images/icon-self-care.svg);
+
+}
+
+/*  */
+
+.grid .inner-div {
+    width: 100%;
+    height: 165px;
+    background-color: var(--Dark-blue);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner-div .header p {
+    font-size: 15px;
+}
+
+.inner-div .header span {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.inner-div h2 {
+    margin-top: 25px;
+    font-weight: 300;
+    font-size: 45px;
+}
+
+.inner-div .more-info {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--Pale-Blue);
+}
+
+
+/* Queres */
+@media (max-width:785px) {
+    main {
+        flex-direction: column;
+        width: 90% !important;
+    }
+
+    .profile-div {
+        width: 100% !important;
+        align-items: center;
+    }
+
+
+    .account-continer {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .options-div {
+        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .info-grid-continer {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 !important;
+    }
+
+    .grid {
+        width: 100%;
+    }
+}
+
+@media (max-width:360px) {
+    .info-grid-continer {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 !important;
+    }
+
+    .grid {
+        width: 100%;
+    }
+}
