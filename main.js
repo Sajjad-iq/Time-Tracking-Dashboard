@@ -2,19 +2,16 @@ var timeframe = 'daily'; //default value
 var container = document.querySelector(".info-grid-continer")
 
 
-let child = document.querySelector(".grid")
-child.remove();
 
-async function getData() {
-  await fetch('./data.json')
-    .then(resp => resp.json())
-    .then(jsonData => {
-      jsonData.forEach(element => {
-        container.insertAdjacentHTML('beforeend',
-          createRegularCard(element));
-      });
-    })
-}
+fetch('./data.json')
+  .then(resp => resp.json())
+  .then(jsonData => {
+    jsonData.forEach(element => {
+      container.insertAdjacentHTML('beforeend',
+        createRegularCard(element));
+    });
+  })
+
 
 
 
@@ -44,4 +41,3 @@ function createRegularCard(element) {
 }
 
 
-getData()
