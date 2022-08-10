@@ -94,6 +94,10 @@ main {
     cursor: pointer;
 }
 
+.menu-active {
+    color: white !important;
+}
+
 
 
 .info-grid-continer {
@@ -168,7 +172,7 @@ main {
     align-items: center;
 }
 
-.inner-div .header p {
+.inner-div .header .title {
     font-size: 15px;
 }
 
@@ -177,7 +181,7 @@ main {
     cursor: pointer;
 }
 
-.inner-div h2 {
+.inner-div .hours {
     margin-top: 25px;
     font-weight: 300;
     font-size: 45px;
